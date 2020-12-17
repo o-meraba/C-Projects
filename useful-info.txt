@@ -1,0 +1,57 @@
+#How to compile and run a C/C++ code in Linux
+
+Step #1 -- For C Programming
+ 	$ sudo apt-get update
+	$ sudo apt-get install build-essential manpages-dev
+
+Step #2
+	$ whereis gcc
+	$ which gcc 
+	$ gcc --version
+
+Step #3
+	#create a c or cpp file
+	$nano demo-c.c
+	#add a sample code in c file
+	$ cc demo-c.c -o demo  #cc program-source-code.c -o executable-file-name
+	or
+	$ gcc demo-c.c -o demo  #gcc program-source-code.c -o executable-file-name
+	or 
+	$ make executable-file-name
+
+Step #4
+	$ ./demo #for run or execute the program
+	or
+	$ /path/to/demo
+
+Step #5 -- For C++ Programming
+	#create a program called demo2.C or demo2.cpp add add to a sample code
+	$g++ demo2.C -o demo2
+	$make demo2
+Step #6 
+	$./demo2
+
+Step #7
+	#how to generate symbolic information for gdb and warning messages
+	$cc -g -Wall input.c -o executable #for C
+	$g++ -g -Wall input.C -o executable #for C++
+
+Step #8
+	#how to generate optimized code on a Linux Machine
+	$cc -O input.c -o executable #for C
+	#g++ -O -Wall input.C -o executable
+
+Step #9
+	#how to compile a C program that uses math functions
+	$cc myth1.c -o executable -lm
+
+Step #10
+	#how to compile a C++ program that uses Xlib graphics functions
+	$g++ fireworks.C -o executable -lX11
+
+Step #11
+	#how to compile a program with multiple source files
+	$cc light.c sky.c fireworks.c -o executable #for C
+	$g++ file1.C file2.C file3.C -o executable  #for C++
+
+
